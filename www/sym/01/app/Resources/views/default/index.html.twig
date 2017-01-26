@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+{% block right %}
+   rechts
+
+
+{% endblock %}
+
+
+{% block left %}
+
+ {% for genus in genuses %}
+
+     <a href="{{ path('genus_show', {'genus_name': genus.id}) }}">
+         {{ genus.name }}
+     </a>
+
+     <Br><Br>
+
+ {%  endfor %}
+
+
+
+
+
+{% endblock %}
+
+
+
+{% block stylesheets %}
+
+{% endblock %}

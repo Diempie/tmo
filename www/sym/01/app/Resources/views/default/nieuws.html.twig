@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+
+{% block right %}
+   rechts
+
+
+{% endblock %}
+
+
+{% block left %}
+
+
+ {% for bericht in nieuws %}
+
+
+
+
+     <a href="{{ path('nieuwsbericht', {'url': bericht.url,'id': bericht.id}) }}">
+         {{bericht.img_thumbnail}}
+        {{bericht.titel}}
+     </a>
+
+     <Br><Br>
+
+ {%  endfor %}
+
+
+
+
+
+{% endblock %}
+
+
+
+{% block stylesheets %}
+
+{% endblock %}
